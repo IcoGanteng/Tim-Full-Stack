@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Footprints, Flame, Moon, Droplets } from "lucide-react";
+import { Footprints, Flame, Moon, Droplets, Heart } from "lucide-react";
 
 const iconMap = {
   footsteps: Footprints,
   flame: Flame,
   moon: Moon,
   droplets: Droplets,
+  heart: Heart,
 };
 
 export default function StatCard({
@@ -67,6 +68,7 @@ export default function StatCard({
     flame: { bg: "bg-[#D4A574]/10", text: "text-[#D4A574]" },
     moon: { bg: "bg-[#6B5344]/10", text: "text-[#6B5344]" },
     droplets: { bg: "bg-[#C4A77D]/10", text: "text-[#8B7355]" },
+    heart: { bg: "bg-red-100", text: "text-red-500" },
   };
 
   const progressColors = {
@@ -74,6 +76,7 @@ export default function StatCard({
     flame: "bg-gradient-to-r from-[#D4A574] to-[#E8C5A5]",
     moon: "bg-gradient-to-r from-[#6B5344] to-[#8B7355]",
     droplets: "bg-gradient-to-r from-[#8B7355] to-[#D4A574]",
+    heart: "bg-gradient-to-r from-red-400 to-red-500",
   };
 
   return (
